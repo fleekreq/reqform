@@ -1,6 +1,5 @@
 
        $(document).ready(function() {
-              alert('Thankss');
             // Function to get URL parameters
             function getUrlParameter(name) {
                 name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
