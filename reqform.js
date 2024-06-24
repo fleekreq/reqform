@@ -15,7 +15,7 @@
             }
 
             // Fetch mappings from an external JSON file
-            $.getJSON('https://raw.githubusercontent.com/zainfleek/reqform/b440d9a311b32f32fe7d027cb5c0f0df2ded471b/mappings.json', function(data) {
+            $.getJSON('mappings.json', function(data) {
                 // Define mappings for 'a', 's', and 'form' from JSON data
                 var aMapping = data.aMapping;
                 var sMapping = data.sMapping;
