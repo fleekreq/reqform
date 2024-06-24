@@ -2,16 +2,25 @@
 {
     "aMapping": {
         "1100": "Zain Ali",
-        "0126": "Umair Khan",
-        "0225": "Aariz Khan"
+        "0234": "Ammar Ali",
+        "0239": "Fawwad Ali"
     },
     "sMapping": {
         "em": "Email",
-        "web": "Website"
+        "fb": "Facebook Ads",
+        "web": "Website",
+        "ts": "Trade Show",
+        "dc": "Direct Client",
+        "bk": "Bark-Fleekbiz"
     },
 
     "formMapping": {
         "logo": "https://forms.zohopublic.com/fleekbiz/form/LogoQuestionnaire/formperma/wX8YNxrdV8uo_H-Zw1VikE-5MCdm_bHObEaqpPehMd4",
-        "web": "https://forms.zohopublic.com/fleekbiz/form/WebsiteDevelopmentQuestionnaire/formperma/c7K9KbFEnb1qO6Zn0Irtso5Or4MPaUD2Fh10pzny_bA"
+        "web": "https://forms.zohopublic.com/fleekbiz/form/WebsiteDevelopmentQuestionnaire/formperma/c7K9KbFEnb1qO6Zn0Irtso5Or4MPaUD2Fh10pzny_bA",
+        "content": "https://forms.zohopublic.com/fleekbiz/form/ContentWritingForm/formperma/qAtt0ROFxzklrDM-UmNtkEWJao7D8Yrx-JocVdIbVSg",
+        "osm": "https://forms.zohopublic.com/fleekbiz/form/OrganicMarketingForm1/formperma/oti8GZ9ZvSG1J0ksVPp5_lTeI4c3nn3bQ_fzvk-Rwu4",
+        "psm": "https://forms.zohopublic.com/fleekbiz/form/PaidMarketingForm/formperma/LDQMN8ezR3Irz6Q97gEc9F8XE0WPML9Zbhuxy9697cY",
+        "lp": "https://forms.zohopublic.com/fleekbiz/form/LandingPages/formperma/pK79uAVUcwm0K_J6XWcrA1E3tCUrgTM47Gu1ARyHRK4"
+        
     }
 }
