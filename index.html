@@ -1,0 +1,213 @@
+<html><head><meta charset="UTF-8"><title>Landing&#x20;Pages</title>
+<link href="css/form.css" rel="stylesheet" type="text/css">
+
+<style>
+      iframe {
+        background-color: yellow;
+        height: 2500px !important;
+        width: 100% !important;
+        border: none;
+      }
+    </style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="js/validation.js"></script>
+
+<!--script>
+        $(document).ready(function() {
+        function updateIframeSrcWithParameters() {
+          // Get the current URL
+          var url = window.location.href;
+          // Parse the URL to get parameters
+          var params = new URLSearchParams(new URL(url).search);
+          // Get the values of the parameters
+          var fValue = params.get('form');
+          var aValue = params.get('a');
+          var sValue = params.get('s');
+          // Get the iframe element
+          var iframe = $('#rform');
+          // If the "f" parameter exists, update the src attribute of the iframe
+      if (aValue || fValue || sValue) {
+          if (fValue === "content") {iframe.attr('src', 'https://forms.zohopublic.com/fleekbiz/form/ContentWritingForm/formperma/qAtt0ROFxzklrDM-UmNtkEWJao7D8Yrx-JocVdIbVSg');}
+          if (fValue === "logo") {iframe.attr('src', 'https://forms.zohopublic.com/fleekbiz/form/LogoQuestionnaire/formperma/wX8YNxrdV8uo_H-Zw1VikE-5MCdm_bHObEaqpPehMd4');}
+          if (fValue === "web") {iframe.attr('src', 'https://forms.zohopublic.com/fleekbiz/form/WebsiteDevelopmentQuestionnaire/formperma/c7K9KbFEnb1qO6Zn0Irtso5Or4MPaUD2Fh10pzny_bA');}
+          if (fValue === "osm") {iframe.attr('src', 'https://forms.zohopublic.com/fleekbiz/form/OrganicMarketingForm1/formperma/oti8GZ9ZvSG1J0ksVPp5_lTeI4c3nn3bQ_fzvk-Rwu4');}
+          if (fValue === "psm") {iframe.attr('src', 'https://forms.zohopublic.com/fleekbiz/form/PaidMarketingForm/formperma/LDQMN8ezR3Irz6Q97gEc9F8XE0WPML9Zbhuxy9697cY');}
+          if (fValue === "lp") {iframe.attr('src', 'https://forms.zohopublic.com/fleekbiz/form/LandingPages/formperma/pK79uAVUcwm0K_J6XWcrA1E3tCUrgTM47Gu1ARyHRK4');}
+            //else  {iframe.attr('src', 'https://www.google.com');} }
+          
+            // binding agents with unique IDs
+          if (aValue === "1100") {aValue = "Zain Ali";}
+          if (aValue === "0025") {aValue = "Umair Khan";}
+          if (aValue === "0026") {aValue = "Aariz Khan";}
+          if (aValue === "0160") {aValue = "Mjuneeb Tahir";}
+          if (aValue === "0111") {aValue = "Ali Qureshi";}
+          if (aValue === "0234") {aValue = "Ammar Ali";}
+          if (aValue === "0129") {aValue = "Saad Ali";}
+            
+            // binding sources with shortnames
+            if (sValue === "rq") {sValue = "Upwork-RashidQ";}
+            if (sValue === "oa") {sValue = "Upwork-OmarA";}
+            if (sValue === "ma") {sValue = "Upwork-MustafaA";}
+            if (sValue === "ha") {sValue = "Upwork-HamzaA";}
+            if (sValue === "hr") {sValue = "Upwork-HinaR";}
+            if (sValue === "zr") {sValue = "Upwork-ZeeshanR";}
+            if (sValue === "rs") {sValue = "Upwork-RaufS";}
+            if (sValue === "hn") {sValue = "Upwork-HasanN";}
+            if (sValue === "bk") {sValue = "Bark-Fleekbiz";}
+            if (sValue === "uf") {sValue = "Upwork-Fleekbiz";}
+            if (sValue === "web") {sValue = "Website";}
+            if (sValue === "em") {sValue = "Email";}
+            if (sValue === "ts") {sValue = "Trade Show";}
+            if (sValue === "dc") {sValue = "Direct Client";}
+            if (sValue === "fb") {sValue = "Facebook Ads";}
+           
+            // Get the current src attribute 
+            var src = iframe.attr('src');
+            // Append the parameters to the existing src URL
+            var updatedSrc = src;
+            if (aValue) { updatedSrc += (updatedSrc.includes('?') ? '&' : '?') + 'a=' + encodeURIComponent(aValue);}
+            if (sValue) { updatedSrc += (updatedSrc.includes('?') ? '&' : '?') + 's=' + encodeURIComponent(sValue);}
+            // Update the src attribute of the iframe
+            iframe.attr('src', updatedSrc);
+          }
+        }
+      
+        // Call the function when the document is ready
+        updateIframeSrcWithParameters();
+      });
+    </script-->
+ <script>
+        $(document).ready(function() {
+            // Function to get URL parameters
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            }
+
+            // Function to map parameter values to actual values
+            function mapValue(param, mapping) {
+                return mapping[param] || param;
+            }
+
+            // Fetch mappings from an external JSON file
+            $.getJSON('https://dymentionscloud.com/mappings.json', function(data) {
+                // Define mappings for 'a', 's', and 'form' from JSON data
+                var aMapping = data.aMapping;
+                var sMapping = data.sMapping;
+                var formMapping = data.formMapping;
+
+                // Get the values of parameters 'a', 's', and 'form'
+                var paramA = getUrlParameter('a');
+                var paramS = getUrlParameter('s');
+                var paramForm = getUrlParameter('form');
+
+                // Map the values to their actual values
+                var actualA = mapValue(paramA, aMapping);
+                var actualS = mapValue(paramS, sMapping);
+                var actualForm = mapValue(paramForm, formMapping);
+
+                // Update the text field with class 'namefield'
+                $('.agentfield').val(actualA);
+
+                // Update the dropdown with class 'sourcefield'
+                $('.sourcefield').val(actualS);
+
+                // Update the iframe with class 'reqform'
+                if (actualForm !== paramForm) {
+                    var iframeSrc = actualForm;
+                    if (actualA) {
+                        iframeSrc += '?a=' + encodeURIComponent(actualA);
+                    }
+                    if (actualS) {
+                        iframeSrc += (actualA ? '&' : '?') + 's=' + encodeURIComponent(actualS);
+                    }
+                    $('.reqform').attr('src', iframeSrc);
+                }
+            });
+        });
+    </script>
+
+
+</head>
+<body class="zf-backgroundBg"><!-- Change or deletion of the name attributes in the input tag will lead to empty values on record submission-->
+<div class="zf-templateWidth"><form action='https://forms.zohopublic.com/fleekbiz/form/LandingPages/formperma/Z-pPuR30FkJSvntZt4_cdBWbhWukINLF56e-_wioBTA/htmlRecords/submit' name='form' method='POST' onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();' accept-charset='UTF-8' enctype='multipart/form-data' id='form'><input type="hidden" name="zf_referrer_name" value=""><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
+<input type="hidden" name="zf_redirect_url" value=""><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+<input type="hidden" name="zc_gad" value=""><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
+<input type="hidden" name="utm_source" value=""/>
+<input type="hidden" name="utm_medium" value=""/>
+<input type="hidden" name="utm_campaign" value=""/>
+<input type="hidden" name="utm_term" value=""/>
+<input type="hidden" name="utm_content" value=""/>
+<input type="hidden" name="ReferrerName" value=""/>
+<div class="zf-templateWrapper"><!---------template Header Starts Here---------->
+<ul class="zf-tempHeadBdr"><li class="zf-tempHeadContBdr">
+<p class="zf-frmDesc"></p>
+<div class="zf-clearBoth"></div></li></ul><!---------template Header Ends Here---------->
+<!---------template Container Starts Here---------->
+<div class="zf-subContWrap zf-topAlign"><ul>
+<!---------Single Line Starts Here---------->
+<li class="zf-tempFrmWrapper zf-small"><label class="zf-labelName"> 
+Full Name 
+<em class="zf-important">*</em>
+</label>
+<div class="zf-tempContDiv">
+<span> <input type="text" name="SingleLine" checktype="c1" value="" maxlength="255" fieldType=1 placeholder=""/></span> <p id="SingleLine_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+</div><div class="zf-clearBoth"></div></li><!---------Single Line Ends Here---------->
+<!---------Email Starts Here---------->  
+<li class="zf-tempFrmWrapper zf-small"><label class="zf-labelName"> 
+Email 
+<em class="zf-important">*</em>
+</label>
+<div class="zf-tempContDiv">
+<span> <input fieldType=9  type="text" maxlength="255" name="Email" checktype="c5" value="" placeholder=""/></span> <p id="Email_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+</div><div class="zf-clearBoth"></div></li><!---------Email Ends Here---------->  
+<!---------Phone Starts Here----------> 
+<li  class="zf-tempFrmWrapper zf-small"><label class="zf-labelName"> 
+Phone 
+<em class="zf-important">*</em>
+</label>
+<div class="zf-tempContDiv zf-phonefld">
+<div
+class="zf-phwrapper zf-phNumber"  
+>
+<span> <input type="text" compname="PhoneNumber" name="PhoneNumber_countrycode" maxlength="20" checktype="c7" value="" phoneFormat="1" isCountryCodeEnabled=false fieldType="11" id="international_PhoneNumber_countrycode" valType="number" phoneFormatType="1" placeholder="" />
+<label>Number</label> </span>
+<div class="zf-clearBoth"></div></div><p id="PhoneNumber_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+</div><div class="zf-clearBoth"></div></li><!---------Phone Ends Here----------> 
+<!---------Dropdown Starts Here---------->
+<li class="zf-tempFrmWrapper zf-small"><label class="zf-labelName">
+Lead Source
+<em class="zf-important">*</em>
+</label>
+<div class="zf-tempContDiv">
+<select class="zf-form-sBox sourcefield" name="Dropdown" checktype="c1">
+<option selected="true" value="-Select-" class="sourcefield">-Select-</option>
+<option value="Email">Email</option>
+<option value="Search&#x20;Engine">Search Engine</option>
+<option value="Social&#x20;Media">Social Media</option>
+<option value="Trade&#x20;Show">Trade Show</option>
+<option value="Website">Website</option>
+<option value="Word&#x20;of&#x20;Mouth">Word of Mouth</option>
+</select><p id="Dropdown_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+</div><div class="zf-clearBoth"></div></li><!---------Dropdown Ends Here---------->
+<!---------Single Line Starts Here---------->
+<li class="zf-tempFrmWrapper zf-small"><label class="zf-labelName"> 
+Agent 
+</label>
+<div class="zf-tempContDiv">
+<span> <input class="agentfield" type="text" name="SingleLine1" checktype="c1" value="" maxlength="255" fieldType=1 placeholder=""/></span> <p id="SingleLine1_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+</div><div class="zf-clearBoth"></div></li><!---------Single Line Ends Here---------->
+</ul></div><!---------template Container Starts Here---------->
+<ul><li class="zf-fmFooter"><button class="zf-submitColor" >Submit</button></li></ul></div><!-- 'zf-templateWrapper' ends --></form></div><!-- 'zf-templateWidth' ends -->
+<script type="text/javascript">var zf_DateRegex = new RegExp("^(([0][1-9])|([1-2][0-9])|([3][0-1]))[-](Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[-](?:(?:19|20)[0-9]{2})$");
+var zf_MandArray = [ "SingleLine", "Email", "PhoneNumber_countrycode", "Dropdown"]; 
+var zf_FieldArray = [ "SingleLine", "Email", "PhoneNumber_countrycode", "Dropdown", "SingleLine1"]; 
+var isSalesIQIntegrationEnabled = false;
+var salesIQFieldsArray = [];</script>
+
+
+ <iframe class="reqform" src="about:blank"></iframe>
+</body></html>

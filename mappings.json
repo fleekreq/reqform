@@ -1,0 +1,16 @@
+
+{
+    "aMapping": {
+        "1100": "Zain Ali",
+        "0126": "Umair Khan"
+    },
+    "sMapping": {
+        "em": "Email",
+        "web": "Website"
+    },
+
+    "formMapping": {
+        "logo": "https://forms.zohopublic.com/fleekbiz/form/LogoQuestionnaire/formperma/wX8YNxrdV8uo_H-Zw1VikE-5MCdm_bHObEaqpPehMd4",
+        "web": "https://forms.zohopublic.com/fleekbiz/form/WebsiteDevelopmentQuestionnaire/formperma/c7K9KbFEnb1qO6Zn0Irtso5Or4MPaUD2Fh10pzny_bA"
+    }
+}
