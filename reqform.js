@@ -14,7 +14,7 @@
             }
 
             // Fetch mappings from an external JSON file
-            $.getJSON('https://dymentionscloud.com/mappings.json', function(data) {
+            $.getJSON('mappings.json', function(data) {
                 // Define mappings for 'a', 's', and 'form' from JSON data
                 var aMapping = data.aMapping;
                 var sMapping = data.sMapping;
