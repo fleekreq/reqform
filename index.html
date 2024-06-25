@@ -17,7 +17,9 @@
       
 </head>
 <body class="zf-backgroundBg"><!-- Change or deletion of the name attributes in the input tag will lead to empty values on record submission-->
-<div class="zf-templateWidth"><form action='https://forms.zohopublic.com/fleekbiz/form/LandingPages/formperma/Z-pPuR30FkJSvntZt4_cdBWbhWukINLF56e-_wioBTA/htmlRecords/submit' name='form' method='POST' onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();' accept-charset='UTF-8' enctype='multipart/form-data' id='form'><input type="hidden" name="zf_referrer_name" value=""><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
+<div class="zf-template with">
+<h2>JAVASCRIPT BASED FORM</h2>    
+<form action='https://forms.zohopublic.com/fleekbiz/form/LandingPages/formperma/Z-pPuR30FkJSvntZt4_cdBWbhWukINLF56e-_wioBTA/htmlRecords/submit' name='form' method='POST' onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();' accept-charset='UTF-8' enctype='multipart/form-data' id='form'><input type="hidden" name="zf_referrer_name" value=""><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
 <input type="hidden" name="zf_redirect_url" value=""><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
 <input type="hidden" name="zc_gad" value=""><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
 <input type="hidden" name="utm_source" value=""/>
@@ -83,7 +85,7 @@ var isSalesIQIntegrationEnabled = false;
 var salesIQFieldsArray = [];</script>
 
       <div style="float:right"><b>How to use:</b><br/> add "?" after /reqform/, then add form=[formtype]&a=[agentcode]&s=[sourcecode]<br/><br/>
-Example: /reqform/?form=logo&a=1100&s=web<br/>
+Example: /reqform/<span style="background-color:yellow;"?form=logo&a=1100&s=web</span><br/>
 <br/><br/><br/>
 
  <b>Values you can use:</b> <br/><br/>          
@@ -93,6 +95,8 @@ s= em, fb, web, ts, dc, bk
 
 
 </div>
+<hr>
 
+      <h2>IFRAME BASED FORM</h2>   
  <iframe class="reqform" src="about:blank"></iframe>
 </body></html>
