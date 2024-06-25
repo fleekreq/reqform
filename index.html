@@ -4,11 +4,13 @@
       <title>Requirement Forms Demo</title>
 <style>
       iframe {
-        background-color: yellow;
+        background-color: grey;
         height: 2500px !important;
         width: 100% !important;
         border: none;
       }
+
+      .zf-templateWidth {float:left;}
     </style>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
  <script src="reqform.js"></script>
@@ -25,8 +27,7 @@
 <input type="hidden" name="utm_content" value=""/>
 <input type="hidden" name="ReferrerName" value=""/>
 <div class="zf-templateWrapper"><!---------template Header Starts Here---------->
-<ul class="zf-tempHeadBdr"><li class="zf-tempHeadContBdr">
-<div class="zf-clearBoth"></div></li></ul><!---------template Header Ends Here---------->
+<ul class="zf-tempHeadBdr"></ul><!---------template Header Ends Here---------->
 <!---------template Container Starts Here---------->
 <div class="zf-subContWrap zf-topAlign"><ul>
 <!---------Single Line Starts Here---------->
@@ -81,6 +82,15 @@ var zf_FieldArray = [ "SingleLine", "Email", "PhoneNumber_countrycode", "SingleL
 var isSalesIQIntegrationEnabled = false;
 var salesIQFieldsArray = [];</script>
 
+      <div>How to use: add "?" after /reqform/, type form=[formtype]&a=[agentcode]&s=[sourcecode]<br/>
+Example: /reqform/?form=logo&a=1100&s=web<br/>
+
+form= logo, web, osm, psm, content, lp.<br/>
+a= 1100, 0234, 0239<br/>
+s= em, fb, web, ts, dc, bk
+
+
+</div>
 
  <iframe class="reqform" src="about:blank"></iframe>
 </body></html>
