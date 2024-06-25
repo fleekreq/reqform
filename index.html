@@ -5,7 +5,7 @@
 <style>
       iframe {
         background-color: grey;
-        height: 2500px !important;
+        height: 2000px !important;
         width: 100% !important;
         border: none;
       }
@@ -82,10 +82,12 @@ var zf_FieldArray = [ "SingleLine", "Email", "PhoneNumber_countrycode", "SingleL
 var isSalesIQIntegrationEnabled = false;
 var salesIQFieldsArray = [];</script>
 
-      <div>How to use: add "?" after /reqform/, type form=[formtype]&a=[agentcode]&s=[sourcecode]<br/>
+      <div style="float:right"><b>How to use:</b><br/> add "?" after /reqform/, then add form=[formtype]&a=[agentcode]&s=[sourcecode]<br/><br/>
 Example: /reqform/?form=logo&a=1100&s=web<br/>
+<br/><br/><br/>
 
-form= logo, web, osm, psm, content, lp.<br/>
+ <b>Values you can use:</b> <br/><br/>          
+form = logo, web, osm, psm, content, lp<br/>
 a= 1100, 0234, 0239<br/>
 s= em, fb, web, ts, dc, bk
 
